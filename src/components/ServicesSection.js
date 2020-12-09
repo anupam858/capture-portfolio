@@ -7,6 +7,8 @@ import home2 from '../img/home2.png';
 
 import { About, Description, Image } from '../styles';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 const ServicesSection = () => {
 
