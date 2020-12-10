@@ -1,12 +1,20 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const About = styled.div`
+export const About = styled(motion.div)`
     display:flex;
     min-height:90vh;
     align-items:center;
     justify-content: space-between;
     padding: 5rem 10rem;
     color: white;
+    scroll-snap-align: start;
+
+    @media (max-aspect-ratio: 1/1){
+        display: block;
+        padding: 2.5rem 2rem;
+    }
+    
 `
 export const Description = styled.div`
     flex:1;

@@ -3,10 +3,14 @@ import styled from 'styled-components';
 import { About } from '../styles';
 import Toggle from './Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
+import { useScroll } from './useScroll';
+import { scrollReveal } from '../animation';
 
 const FaqSection = () => {
+
+    const [element, control] = useScroll();
     return (
-        <Faq>
+        <Faq variants={scrollReveal} ref={element} animate={control} initial='hidden'>
             <h2>Any Questions <span>FAQ</span></h2>
             <div className="questions">
                 <AnimateSharedLayout>
@@ -68,6 +72,10 @@ const Faq = styled(About)`
         p{
             padding: 1rem; 
         }
+    }
+
+    @media (max-aspect-ratio: 1/1){
+        padding: 2.5rem 5rem;
     }
 `
 export default FaqSection;

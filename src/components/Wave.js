@@ -17,6 +17,10 @@ const SyteledWave = styled.svg`
     position: absolute;
     left: 0;
     z-index: -1;
+
+    @media (max-aspect-ratio: 1/1){
+        top:10%;
+    }
 `;
 
 export default Wave;

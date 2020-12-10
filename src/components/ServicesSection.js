@@ -7,13 +7,14 @@ import home2 from '../img/home2.png';
 
 import { About, Description, Image } from '../styles';
 import styled from 'styled-components';
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
+import { scrollReveal } from '../animation';
+import { useScroll } from './useScroll';
 
 const ServicesSection = () => {
 
+    const [element, control] = useScroll();
     return (
-        <Services>
+        <Services ref={element} variants={scrollReveal} animate={control} initial='hidden' >
             <Description>
                 <h2>High <span>quality</span> services.</h2>
                 <Cards>
@@ -66,11 +67,16 @@ const Services = styled(About)`
         width:80%;
         padding: 1rem 0rem 4rem 0rem;
     }
+
 `
 
 const Cards = styled.div`
      display:flex;
      flex-wrap:wrap;
+
+     @media (max-aspect-ratio: 1/1) {
+    justify-content: center;
+  }
 `
 
 const Card = styled.div`

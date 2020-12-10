@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 import AboutUs from './pages/AboutUs';
@@ -13,6 +13,13 @@ import { AnimatePresence } from 'framer-motion';
 function App() {
 
   const location = useLocation();
+
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0
+    })
+  }, [location]);
 
   return (
     <div className="App">
