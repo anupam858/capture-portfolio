@@ -74,8 +74,11 @@ const Cards = styled.div`
      display:flex;
      flex-wrap:wrap;
 
-     @media (max-aspect-ratio: 1/1) {
-    justify-content: center;
+    @media (max-aspect-ratio: 1/1) {
+    width: 80vw;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right:0;
   }
 `
 
@@ -86,4 +89,12 @@ const Card = styled.div`
         display:flex;
         align-items:center;
     }
+    h3{
+        padding-left:0.5rem;
+    }
+    @media (max-aspect-ratio: 1/1) {
+        flex-basis:5rem;
+        padding-left: 1.5rem;
+    }
+    
 `

@@ -13,6 +13,8 @@ export const About = styled(motion.div)`
     @media (max-aspect-ratio: 1/1){
         display: block;
         padding: 2.5rem 2rem;
+
+    
     }
     
 `
