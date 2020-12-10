@@ -25,6 +25,10 @@ export const Description = styled.div`
     h2{
         font-weight: lighter;
     }
+
+    @media (max-aspect-ratio: 1/1){
+        padding-right: 0rem;
+    }
 `
 
 export const Image = styled.div`

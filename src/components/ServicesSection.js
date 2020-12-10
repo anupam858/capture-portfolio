@@ -92,9 +92,9 @@ const Card = styled.div`
     h3{
         padding-left:0.5rem;
     }
-    @media (max-aspect-ratio: 1/1) {
+    @media (max-aspect-ratio: 1/1 ) {
         flex-basis:5rem;
-        padding-left: 1.5rem;
+        padding-left: 0.5rem;
     }
     
 `
